@@ -5,13 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/main.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">   
+    <script src="https://kit.fontawesome.com/94f7b91cb2.js" crossorigin="anonymous"></script> 
     <title>Naanva bakery</title>
 </head>
 <body>
  <section class="header">
   <nav>
-    <a href="index.html"><img class="logo" src="css/images/Logo-1.png" alt="logo">
-     <div class="nav-links">
+    <a href="index.html"><img class="logo" src="css/images/Logo-1.png" alt="logo"></a>
+     <div class="nav-links" id="navLinks">
+     <i class="fa-solid fa-xmark" onclick="hideMenu()" ></i>
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#products">Products</a></li>
@@ -19,18 +24,27 @@
         <li><a href="#contact">Contact Us</a></li>
       </ul>
      </div> 
-    </a>
+     <i class="fa-solid fa-bars" onclick="showMenu()"></i>
   </nav>
+<div class="text-box">
+  <h1>Here is a door to the world of flavors and smells</h1>
+  <p>If you want to enter</p>
+  <a class="hero-btn" href="products.html">Order Now</a>
+</div>
 
  </section>
- <!--
-    <div class="hero-image">
-        <div class="hero-text">
-          <h1>Here is a door to the world of flavor and smell.</h1>
-          <p>If you want to enter</p>
-          <button>Order Now</button>
-        </div>
-      </div> 
-      --> 
+
+
+<!------side menu----->
+ <script>
+      var navLinks = document.getElementById("navLinks");
+      function showMenu(){
+        navLinks.style.right = "0";
+      }
+      function hideMenu(){
+        navLinks.style.right = "-200px";
+      }     
+ </script>
+ 
 </body>
 </html>
